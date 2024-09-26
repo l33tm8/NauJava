@@ -1,0 +1,5 @@
+Employee{fullName='Mary Doe', age=19, department='IT', salary=12344.0}
+Employee{fullName='John Doe', age=45, department='IT', salary=12345.0}
+Employee{fullName='Jane Doe', age=54, department='CEO', salary=20430.0}
+Employee{fullName='Bob Doe', age=90, department='Office', salary=44444.0}
+Employee{fullName='John Smith', age=76, department='Manager', salary=50430.0}
