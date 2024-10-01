@@ -31,13 +31,11 @@ public class CommandProcessor {
                     noteService.updateNote(Long.valueOf(commandParts[1]), commandParts[2], commandParts[3]);
                     System.out.println("Заметка обновлена");
                 }
-                case "read" -> {
-                    System.out.println(noteService.findById(Long.valueOf(commandParts[1])));
-                }
+                case "read" -> System.out.println(noteService.findById(Long.valueOf(commandParts[1])));
+
                 default -> System.out.println("Введена неизвестная команда...");
             }
-        }
-        catch (ArrayIndexOutOfBoundsException e) {
+        } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Неверное количество параметров");
         }
 
