@@ -21,17 +21,17 @@ public class NoteServiceImpl implements NoteService {
         note.setId(id);
         note.setHeader(header);
         note.setContent(content);
-        noteRepository.create(note);
+        noteRepository.save(note);
     }
 
     @Override
     public Note findById(Long id) {
-        return noteRepository.read(id);
+        return noteRepository.findById(id).orElse(null);
     }
 
     @Override
     public void deleteById(Long id) {
-        noteRepository.delete(id);
+        noteRepository.deleteById(id);
     }
 
     @Override
@@ -40,6 +40,6 @@ public class NoteServiceImpl implements NoteService {
         note.setId(id);
         note.setHeader(newHeader);
         note.setContent(newContent);
-        noteRepository.update(note);
+        noteRepository.save(note);
     }
 }
