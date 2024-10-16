@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tag List</title>
+</head>
+<body>
+<h1>Tag List</h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Creation date</th>
+        <th></th>
+    </tr>
+    <tr th:each="tag : ${tags}">
+        <td th:text="${tag.getId()}"></td>
+        <td th:text="${tag.getName()}"></td>
+        <td th:text="${tag.getCreation_date()}"></td>
+    </tr>
+</table>
+
+</body>
+</html>

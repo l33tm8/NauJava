@@ -44,7 +44,7 @@ public class AttachmentTest {
         attachment.setName(attachmentName);
         attachmentRepository.save(attachment);
 
-        Attachment foundAttachment = attachmentRepositoryCustom.findByName(attachmentName).getFirst();
+        Attachment foundAttachment = attachmentRepositoryCustom.findByNameLike(attachmentName).getFirst();
         Assertions.assertNotNull(foundAttachment);
         Assertions.assertEquals(attachment.getId(), foundAttachment.getId());
         Assertions.assertEquals(attachment.getName(), foundAttachment.getName());

@@ -20,7 +20,7 @@ public class AttachmentRepositoryImpl implements AttachmentRepositoryCustom {
     }
 
     @Override
-    public List<Attachment> findByName(String name) {
+    public List<Attachment> findByNameLike(String name) {
         CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
         CriteriaQuery<Attachment> criteriaQuery = criteriaBuilder.createQuery(Attachment.class);
         Root<Attachment> root = criteriaQuery.from(Attachment.class);
