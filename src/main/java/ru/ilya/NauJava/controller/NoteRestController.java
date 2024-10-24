@@ -24,7 +24,7 @@ public class NoteRestController {
     }
 
     @GetMapping("/findByHeaderAndUser")
-    public List<Note> findByHeaderAndUser(@RequestParam String header, @RequestParam Integer userId) {
+    public List<Note> findByHeaderAndUser(@RequestParam String header, @RequestParam Long userId) {
         User user = userRepository.findById(userId).orElse(null);
         return noteRepository.findByHeaderAndUser(header, user);
     }
